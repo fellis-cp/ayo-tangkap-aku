@@ -174,14 +174,22 @@ def main():
     
 def game_over(score):
     window.fill(white)
-    message_to_screen("skill issue", display_width/2, display_height/2 - 50, 70)
+    message_to_screen("Game Over", display_width/2, display_height/2 - 50, 70)
     message_to_screen("Score: " + str(score), display_width/2, display_height/2 + 50, 40)
+    button("Main Lagi", 100, 450, 100, 50, dark_green, bright_green, "play")
+    button("keluar", 300, 450, 75, 50, dark_red, bright_red, "quit")
     pygame.display.update()
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if 100 < event.pos[0] < 200 and 450 < event.pos[1] < 500:
+                    main()
+                elif 300 < event.pos[0] < 375 and 450 < event.pos[1] < 500:
+                    pygame.quit()
+                    quit()
 
 game_intro()
 pygame.quit()
