@@ -1,2 +1,5 @@
 # ayo tangkap aku
- simple python game
+ simple python game req 
+ - pip install pygame
+
+ 
