@@ -177,7 +177,7 @@ def game_over(score):
     message_to_screen("Game Over", display_width/2, display_height/2 - 50, 70)
     message_to_screen("Score: " + str(score), display_width/2, display_height/2 + 50, 40)
     button("Main Lagi", 100, 450, 100, 50, dark_green, bright_green, "play")
-    button("keluar", 300, 450, 75, 50, dark_red, bright_red, "quit")
+    button("keluar", 250, 450, 100, 50, dark_red, bright_red, "quit")
     pygame.display.update()
     while True:
         for event in pygame.event.get():
